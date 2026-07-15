@@ -1,14 +1,16 @@
-#What the worlflow is called
+# What the workflow is called
 name: First CI
-#When it run
+
+# When it runs
 on: push
-#What it does
+
+# What it does
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Show the commit
-      run: echo "Commit: $GITHUB_SHA"
+        run: echo "Commit: $GITHUB_SHA"
       - name: List the files
         run: ls -la
