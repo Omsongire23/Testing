@@ -1,0 +1,11 @@
+#What the worlflow is called
+name: First CI
+#When it run
+on: push
+#What it does
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Hello from GitHub Action!"
