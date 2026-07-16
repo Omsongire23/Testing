@@ -1,12 +1,12 @@
 env:
-  APP NAME: my-app
+  APP_NAME: my-app
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
       NODE_ENV: production
     steps:
-      - name: Show then
+      - name: Show them
         env:
           GREETING: HELLO
         run: echo "SAPP_NAME $NODE_ENV $GREETING"
