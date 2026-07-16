@@ -1,13 +1,12 @@
-name: CI
-on: push
+env:
+  APP NAME: my-app
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "Lint step running"
-    test:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - run: echo "Test step running"
+      - name: Show then
+        env:
+          GREETING: HELLO
+        run: echo "SAPP_NAME $NODE_ENV $GREETING"
